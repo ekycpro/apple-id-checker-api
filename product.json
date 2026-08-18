@@ -1,0 +1,63 @@
+{
+  "name": "Apple Checker API",
+  "brand": "eKYC Pro",
+  "repository": "ekycpro/apple-id-checker-api",
+  "description": "Synchronous apple checks using one phone number or email address according to service_type.",
+  "official_site": "https://ekycpro.com",
+  "landing_page": "https://ekycpro.com/tools/apple",
+  "canonical_docs": "https://docs.ekycpro.com/apple-number-checker",
+  "base_url": "https://api.ekycpro.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "sync",
+  "endpoints": {
+    "check": {
+      "method": "POST",
+      "path": "/v1/check"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "products": [
+    {
+      "type": "apple",
+      "name": "Apple Checker",
+      "inputKind": "phone",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/apple-number-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    },
+    {
+      "type": "apple_email",
+      "name": "Apple Email Checker",
+      "inputKind": "email",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/apple-email-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    }
+  ],
+  "pricing_url": "https://ekycpro.com/pricing",
+  "maintainer": "eKYC Pro",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
